@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="muchuan-server" />
+        <module name="muchuan-pojo" />
+        <module name="muchuan-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sky-common" target="17" />
+      <module name="sky-pojo" target="17" />
+      <module name="sky-server" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="muchuan-common" options="-parameters" />
+      <module name="muchuan-pojo" options="-parameters" />
+      <module name="muchuan-server" options="-parameters" />
+    </option>
+  </component>
+</project>

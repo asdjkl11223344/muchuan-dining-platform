@@ -1,0 +1,96 @@
+SQL> select 'employee' as table_name, count(*) as cnt from employee
+table_name=employee | cnt=4
+
+SQL> select 'category' as table_name, count(*) as cnt from category
+table_name=category | cnt=10
+
+SQL> select 'dish' as table_name, count(*) as cnt from dish
+table_name=dish | cnt=25
+
+SQL> select 'setmeal' as table_name, count(*) as cnt from setmeal
+table_name=setmeal | cnt=1
+
+SQL> select 'user' as table_name, count(*) as cnt from user
+table_name=user | cnt=1
+
+SQL> select 'address_book' as table_name, count(*) as cnt from address_book
+table_name=address_book | cnt=1
+
+SQL> select 'orders' as table_name, count(*) as cnt from orders
+table_name=orders | cnt=19
+
+SQL> select 'order_detail' as table_name, count(*) as cnt from order_detail
+table_name=order_detail | cnt=26
+
+SQL> select id,name,username,status from employee order by id
+id=1 | name=管理员 | username=admin | status=1
+id=2 | name=张三 | username=zhangsan | status=1
+id=3 | name=赵礼兴（神王） | username=zlx | status=1
+id=4 | name=陶某 | username=tao | status=1
+
+SQL> select id,type,name,status,sort from category order by type, sort, id
+id=16 | type=1 | name=蜀味烤鱼 | status=1 | sort=4
+id=17 | type=1 | name=蜀味牛蛙 | status=1 | sort=5
+id=18 | type=1 | name=特色蒸菜 | status=1 | sort=6
+id=19 | type=1 | name=新鲜时蔬 | status=1 | sort=7
+id=20 | type=1 | name=水煮鱼 | status=1 | sort=8
+id=12 | type=1 | name=传统主食 | status=1 | sort=9
+id=11 | type=1 | name=酒水饮料 | status=1 | sort=10
+id=21 | type=1 | name=汤类 | status=1 | sort=11
+id=13 | type=2 | name=人气套餐 | status=1 | sort=12
+id=15 | type=2 | name=商务套餐 | status=1 | sort=13
+
+SQL> select id,name,category_id,price,status from dish order by id limit 30
+id=46 | name=王老吉 | category_id=11 | price=6.00 | status=1
+id=47 | name=北冰洋 | category_id=11 | price=4.00 | status=1
+id=48 | name=雪花啤酒 | category_id=11 | price=4.00 | status=1
+id=49 | name=米饭 | category_id=12 | price=2.00 | status=1
+id=50 | name=馒头 | category_id=12 | price=1.00 | status=1
+id=51 | name=老坛酸菜鱼 | category_id=20 | price=56.00 | status=1
+id=52 | name=经典酸菜鮰鱼 | category_id=20 | price=66.00 | status=1
+id=53 | name=蜀味水煮草鱼 | category_id=20 | price=38.00 | status=1
+id=54 | name=清炒小油菜 | category_id=19 | price=18.00 | status=1
+id=55 | name=蒜蓉娃娃菜 | category_id=19 | price=18.00 | status=1
+id=56 | name=清炒西兰花 | category_id=19 | price=18.00 | status=1
+id=57 | name=炝炒圆白菜 | category_id=19 | price=18.00 | status=1
+id=58 | name=清蒸鲈鱼 | category_id=18 | price=98.00 | status=1
+id=59 | name=东坡肘子 | category_id=18 | price=138.00 | status=1
+id=60 | name=梅菜扣肉 | category_id=18 | price=58.00 | status=1
+id=61 | name=剁椒鱼头 | category_id=18 | price=66.00 | status=1
+id=62 | name=金汤酸菜牛蛙 | category_id=17 | price=88.00 | status=1
+id=63 | name=香锅牛蛙 | category_id=17 | price=88.00 | status=1
+id=64 | name=馋嘴牛蛙 | category_id=17 | price=88.00 | status=1
+id=65 | name=草鱼2斤 | category_id=16 | price=68.00 | status=1
+id=66 | name=江团鱼2斤 | category_id=16 | price=119.00 | status=1
+id=67 | name=鮰鱼2斤 | category_id=16 | price=72.00 | status=1
+id=68 | name=鸡蛋汤 | category_id=21 | price=5.00 | status=1
+id=69 | name=平菇豆腐汤 | category_id=21 | price=6.00 | status=1
+id=70 | name=测试菜品 | category_id=16 | price=30.00 | status=0
+
+SQL> select id,name,category_id,price,status from setmeal order by id
+id=32 | name=蛇皮套餐 | category_id=13 | price=100.00 | status=1
+
+SQL> select id,name,phone,create_time from user order by id
+id=4 | name=null | phone=null | create_time=2026-03-03 21:28:44
+
+SQL> select id,number,status,user_name,consignee,amount,order_time from orders order by id
+id=4 | number=1772854369221 | status=6 | user_name=null | consignee=陶毅 | amount=273.00 | order_time=2026-03-07 11:32:49
+id=5 | number=1773058182917 | status=6 | user_name=null | consignee=陶毅 | amount=168.00 | order_time=2026-03-09 20:09:43
+id=6 | number=1773143340048 | status=6 | user_name=null | consignee=陶毅 | amount=107.00 | order_time=2026-03-10 19:49:00
+id=7 | number=1773210098014 | status=6 | user_name=null | consignee=陶毅 | amount=19.00 | order_time=2026-03-11 14:21:38
+id=8 | number=1773210611954 | status=6 | user_name=null | consignee=陶毅 | amount=107.00 | order_time=2026-03-11 14:30:12
+id=9 | number=1773210728145 | status=6 | user_name=null | consignee=陶毅 | amount=107.00 | order_time=2026-03-11 14:32:08
+id=10 | number=1773213356146 | status=6 | user_name=null | consignee=陶毅 | amount=12.00 | order_time=2026-03-11 15:15:56
+id=11 | number=1773213512167 | status=5 | user_name=null | consignee=陶毅 | amount=79.00 | order_time=2026-03-11 15:18:32
+id=12 | number=1773213560402 | status=6 | user_name=null | consignee=陶毅 | amount=126.00 | order_time=2026-03-11 15:19:20
+id=13 | number=1773217825187 | status=5 | user_name=null | consignee=陶毅 | amount=195.00 | order_time=2026-03-11 16:30:25
+id=14 | number=1773285572522 | status=6 | user_name=null | consignee=陶毅 | amount=1016.00 | order_time=2026-03-12 11:19:33
+id=15 | number=1773285663094 | status=5 | user_name=null | consignee=陶毅 | amount=807.00 | order_time=2026-03-12 11:21:03
+id=16 | number=1773285760152 | status=6 | user_name=null | consignee=陶毅 | amount=207.00 | order_time=2026-03-12 11:22:40
+id=17 | number=1773286469940 | status=5 | user_name=null | consignee=陶毅 | amount=16.00 | order_time=2026-03-12 11:34:30
+id=18 | number=1773286562874 | status=5 | user_name=null | consignee=陶毅 | amount=362.00 | order_time=2026-03-12 11:36:03
+id=19 | number=1773287326928 | status=5 | user_name=null | consignee=陶毅 | amount=21.00 | order_time=2026-03-12 11:48:47
+id=20 | number=1773287494340 | status=5 | user_name=null | consignee=陶毅 | amount=31.00 | order_time=2026-03-12 11:51:34
+id=21 | number=1773288297772 | status=5 | user_name=null | consignee=陶毅 | amount=41.00 | order_time=2026-03-12 12:04:58
+id=22 | number=1773288570792 | status=5 | user_name=null | consignee=陶毅 | amount=27.00 | order_time=2026-03-12 12:09:31
+

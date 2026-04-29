@@ -1,0 +1,76 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${muchuan.datasource.driver-class-name}
+      url: jdbc:mysql://${muchuan.datasource.host}:${muchuan.datasource.port}/${muchuan.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${muchuan.datasource.username}
+      password: ${muchuan.datasource.password}
+  redis:
+    host: ${muchuan.redis.host}
+    port: ${muchuan.redis.port}
+    password: ${muchuan.redis.password}
+    database: ${muchuan.redis.database}
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.muchuan.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      muchuan:
+        mapper: debug
+        service: info
+        controller: info
+
+muchuan:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    endpoint: ${muchuan.alioss.endpoint}
+    access-key-id: ${muchuan.alioss.access-key-id}
+    access-key-secret: ${muchuan.alioss.access-key-secret}
+    bucket-name: ${muchuan.alioss.bucket-name}
+  wechat:
+    appid: ${muchuan.wechat.appid}
+    secret: ${muchuan.wechat.secret}
+    mchid : ${muchuan.wechat.mchid}
+    mchSerialNo: ${muchuan.wechat.mchSerialNo}
+    privateKeyFilePath: ${muchuan.wechat.privateKeyFilePath}
+    apiV3Key: ${muchuan.wechat.apiV3Key}
+    weChatPayCertFilePath: ${muchuan.wechat.weChatPayCertFilePath}
+    notifyUrl: ${muchuan.wechat.notifyUrl}
+    refundNotifyUrl: ${muchuan.wechat.refundNotifyUrl}
+  shop:
+    address: 北京市海淀区上地十街10号
+  baidu:
+    ak: your-ak
+  order:
+    submit:
+      lock-seconds: 5
+      result-ttl-seconds: 10
+    pay:
+      callback-lock-seconds: 10
+    timeline:
+      ttl-days: 30
+      max-size: 100
+

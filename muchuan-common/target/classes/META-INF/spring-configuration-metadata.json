@@ -1,0 +1,121 @@
+{
+  "groups": [
+    {
+      "name": "muchuan.alioss",
+      "type": "com.muchuan.properties.AliOssProperties",
+      "sourceType": "com.muchuan.properties.AliOssProperties"
+    },
+    {
+      "name": "muchuan.jwt",
+      "type": "com.muchuan.properties.JwtProperties",
+      "sourceType": "com.muchuan.properties.JwtProperties"
+    },
+    {
+      "name": "muchuan.wechat",
+      "type": "com.muchuan.properties.WeChatProperties",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "muchuan.alioss.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.AliOssProperties"
+    },
+    {
+      "name": "muchuan.alioss.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.AliOssProperties"
+    },
+    {
+      "name": "muchuan.alioss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.AliOssProperties"
+    },
+    {
+      "name": "muchuan.alioss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.AliOssProperties"
+    },
+    {
+      "name": "muchuan.jwt.admin-secret-key",
+      "type": "java.lang.String",
+      "description": "管理端员工生成jwt令牌相关配置",
+      "sourceType": "com.muchuan.properties.JwtProperties"
+    },
+    {
+      "name": "muchuan.jwt.admin-token-name",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.JwtProperties"
+    },
+    {
+      "name": "muchuan.jwt.admin-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.muchuan.properties.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "muchuan.jwt.user-secret-key",
+      "type": "java.lang.String",
+      "description": "用户端微信用户生成jwt令牌相关配置",
+      "sourceType": "com.muchuan.properties.JwtProperties"
+    },
+    {
+      "name": "muchuan.jwt.user-token-name",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.JwtProperties"
+    },
+    {
+      "name": "muchuan.jwt.user-ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.muchuan.properties.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "muchuan.wechat.api-v3-key",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.appid",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.mch-serial-no",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.mchid",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.notify-url",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.private-key-file-path",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.refund-notify-url",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    },
+    {
+      "name": "muchuan.wechat.we-chat-pay-cert-file-path",
+      "type": "java.lang.String",
+      "sourceType": "com.muchuan.properties.WeChatProperties"
+    }
+  ],
+  "hints": []
+}

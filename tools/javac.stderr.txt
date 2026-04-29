@@ -1,0 +1,4 @@
+D:\学习\自己的项目\外卖项目\muchuan-dining-platform\tools\Hello.java:1: 错误: 非法字符: '\ufeff'
+﻿public class Hello { public static void main(String[] args){ System.out.println("HELLO"); } }
+^
+1 个错误
